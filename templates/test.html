@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Details</title>
+        <link rel="icon" type="image/x-icon" href="static/img/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@500&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" style="background-color:#2b37b5;height: 100px; position:fixed">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="/home" style="color:white; margin-top: 5px; font-size: 25px; background-color:#2b37b5">AP Resume</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="margin-left: 180px">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0" style="position:sticky;">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#collapseOne" style="color:white; font-size: 11px; margin-top: 5px">Personal Details</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#collapseTwo" style="color:white; font-size: 11px; margin-top: 5px">Work History</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#collapseThree" style="color:white; font-size: 11px; margin-top: 5px">Project Detail</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#collapseFour" style="color:white; font-size: 11px; margin-top: 5px">Education Detail</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#collapseFive" style="color:white; font-size: 11px; margin-top: 5px">Skill and Languages</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="img-fluid" style="background-image: url('static/img/details.jpg'); background-color:#2b37b5">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1 style="color:white;">.</h1>
+                        <span class="subheading" style="color:white;">.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<center>
+        <form class="px-md-2" method="post" action="{{ url_for('test') }}" enctype = "multipart/form-data">
+
+        <div class="accordion" id="accordionExample">
+
+
+            <!-- Personal Details -->
+
+            <h2 class="accordion-header" id="headingOne" style="font-family: 'Josefin Sans', sans-serif; color: #2b37b5;margin-bottom: -31px;margin-top: 60px; margin-right: 350px;">Personal Detail and Work History </h2>
+
+
+
+  <div class="accordion-item" style="width:800px;margin-top:50px">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size: 15px">
+        Personal Details
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+
+        <div class="form-outline mb-4">
+                <input type="file" class="form-control" id="image" name="image" required />
+                <label class="form-label" for="profession">Upload Image</label>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Eg : Aman Shaikh" required />
+                    <label for="name" class="form-label">Full Name</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Eg : amanshaikh@gmail.com" required />
+                    <label for="email" class="form-label">Email</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" name="profession" id="profession" class="form-control" placeholder="Eg : Software Engineer" />
+                    <label class="form-label" for="profession">Profession</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="dob" id="dob" required />
+                    <label for="dob" class="form-label">Date of Birth</label>
+                  </div>
+                </div>
+            </div>
+
+            <!-- <div class="form-outline mb-4">
+                <input type="text" name="profession" id="profession" class="form-control" placeholder="Eg : Software Engineer" />
+                <label class="form-label" for="profession">Profession</label>
+            </div> -->
+
+            <div class="form-outline mb-4">
+                <textarea name="objective" cols="100" rows="5" maxlength="400" wrap="hard" placeholder="Eg : I'm XYZ" required ></textarea>
+            </div>
+            <center><label class="form-label" for="objective" style="margin-bottom: 20px">About Me</label></center>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="city" id="city" placeholder="Eg : Kolhapur" required />
+                    <label for="city" class="form-label">City</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="country" id="country" placeholder="Eg : India" required />
+                    <label for="country" class="form-label">Country</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="pin" id="pin" pattern="[0-9]*" inputmode="numeric" placeholder="Eg : 416 008" required />
+                    <label for="exampleDatepicker1" class="form-label">Pin Code</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="number" class="form-control" name="phone" id="phone" placeholder="Eg : 9998887777" required />
+                    <label for="phone" class="form-label">Phone</label>
+                  </div>
+                </div>
+            </div>
+
+      </div>
+    </div>
+  </div>
+
+                <!-- Personal Details ends -->
+
+                <!-- Work History -->
+
+  <div class="accordion-item" style="width:800px">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="font-size: 15px">
+        Work History
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <!-- <h5 class="accordion-header" style="margin-bottom:10px">Work History Detail 1</h5> -->
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="job_title1" id="job_title1" placeholder="Eg : Software Tester" />
+                    <label for="job_title1" class="form-label">Job Title</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="employer1" id="employer1" placeholder="Eg : H & M" />
+                    <label for="employer1" class="form-label">Employer</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="work_city1" id="work_city1" placeholder="Eg : Hyderabad" />
+                    <label for="work_city1" class="form-label">City</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="work_country1" id="work_country1" placeholder="Eg : India" />
+                    <label for="work_country1" class="form-label">Country</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="start_date1" id="start_date1" placeholder="Eg : 03-03-2018" />
+                    <label for="start_date1" class="form-label">Start Date</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="end_date1" id="end_date1" placeholder="Eg : 10-12-2020" />
+                    <label for="end_date1" class="form-label">End Date</label>
+                  </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+                <!-- Work History end-->
+<!-- font-family: 'Open Sans', sans-serif; -->
+
+
+<h2 class="accordion-header" id="headingOne" style="font-family: 'Josefin Sans', sans-serif; color: #2b37b5;margin-bottom: -31px;margin-top: 60px; margin-right: 319px;">Project Detail and Education Detail</h2>
+<!-- <h2 class="accordion-header" id="headingOne" style=" color: #2b37b5;margin-bottom: -31px;margin-top: 60px;">Project and Education Details</h2> -->
+
+                <!-- project detail start-->
+
+                <div class="accordion-item" style="width:800px;margin-top:50px">
+
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="font-size: 15px">
+        Project
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+            <!-- project 1 -->
+              <!-- <h5 class="accordion-header" style="margin-bottom:10px ;">Project Detail 1</h5> -->
+            <div class="form-outline mb-4">
+                <input type="text" name="proj_title1" id="proj_title1" class="form-control" placeholder="Eg : Resume Builder" />
+                <label class="form-label" for="proj_title1">Project Title</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <textarea name="proj_des1" cols="100" rows="4" maxlength="300" wrap="hard" placeholder="Project Description"></textarea>
+            </div>
+            <center><label class="form-label" for="proj_des1" style="margin-bottom: 20px">Project Description</label></center>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="pro_start1" id="pro_start1" />
+                    <label for="pro_start1" class="form-label">Start Date</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="pro_end1" id="pro_end1" />
+                    <label for="pro_end1" class="form-label">End Date</label>
+                  </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- project detail end-->
+
+
+            <!-- Education start -->
+
+  <div class="accordion-item" style="width:800px">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" style="font-size: 15px">
+        Education Details
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+
+            <!-- 12th or HSC -->
+
+            <h5 class="accordion-header" style="margin-bottom:10px">School / College</h5>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="college_name" id="college_name" placeholder="Eg : YUZ College" required />
+                    <label for="college_name" class="form-label">School/College Name</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="college_loc" id="college_loc" placeholder="Kolhapur" required />
+                    <label for="college_loc" class="form-label">College Location</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="college_per" id="college_per" placeholder="Eg : 80.00 %" required />
+                    <label for="college_per" class="form-label">Percentage</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="field_study" id="field_study" placeholder="Eg : Science" required />
+                    <label for="field_study" class="form-label">Field of Study</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="college_start" id="college_start" required />
+                    <label for="college_start" class="form-label">Start Date</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="college_end" id="college_end" required />
+                    <label for="college_end" class="form-label">End Date</label>
+                  </div>
+                </div>
+            </div>
+<hr>
+            <!-- 12th or HSC end-->
+
+            <!-- Degree -->
+
+            <h5 class="accordion-header" style="margin-bottom:10px">School / College</h5>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="deg_clg" id="deg_clg" placeholder="Eg : VBN College" required />
+                    <label for="deg_clg" class="form-label">School/College Name</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="deg_loc" id="deg_loc" placeholder="Eg : Kolhapur" required />
+                    <label for="deg_loc" class="form-label">College Location</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="deg_per" id="deg_per" placeholder="Eg : 78.00 %  or  7.8" required/>
+                    <label for="deg_per" class="form-label">Pecentage or CGPA</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="deg_std_fld" id="deg_std_fld" placeholder="Eg : B.Sc" required />
+                    <label for="deg_std_fld" class="form-label">Field of Study</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="deg_start" id="deg_start" required />
+                    <label for="deg_start" class="form-label">Start Date</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="deg_end" id="deg_end" required />
+                    <label for="deg_end" class="form-label">End Date</label>
+                  </div>
+                </div>
+            </div>
+
+<hr>
+            <!-- Degree end-->
+
+            <!-- Post-Degree -->
+
+            <h5 class="accordion-header" style="margin-bottom:10px">School / College</h5>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="post_deg_clg" id="post_deg_clg" placeholder="Eg : GHJ College" />
+                    <label for="post_deg_clg" class="form-label">School/College Name</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="post_deg_loc" id="post_deg_loc" placeholder="Eg : Kolhapur" />
+                    <label for="post_deg_loc" class="form-label">College Location</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="post_deg_per" id="post_deg_per" placeholder="Eg : 70.00 %  or 7.0" />
+                    <label for="post_deg_per" class="form-label">Pecentage or CGPA</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="text" class="form-control" name="post_deg_std_fld" id="post_deg_std_fld" placeholder="Eg : M.Sc" />
+                    <label for="post_deg_std_fld" class="form-label">Field of Study</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="post_deg_start" id="post_deg_start" />
+                    <label for="post_deg_start" class="form-label">Start Date</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline datepicker">
+                    <input type="date" class="form-control" name="post_deg_end" id="post_deg_end" />
+                    <label for="post_deg_end" class="form-label">End Date</label>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Post-Degree end-->
+
+      </div>
+    </div>
+  </div>
+
+                <!-- Education ends -->
+
+
+
+                                            <!-- Skill start -->
+
+<h2 class="accordion-header" id="headingOne" style="font-family: 'Josefin Sans', sans-serif; color: #2b37b5;margin-bottom: -31px;margin-top: 60px; margin-right: 510px;">Skills and Languages</h2>
+
+                                            <!-- <h2 class="accordion-header" id="headingOne" style="font-family: 'Anton', sans-serif; color: #2b37b5;margin-bottom: -31px;margin-top: 60px;">Skill and Languages</h2> -->
+
+              <div class="accordion-item" style="width:800px;margin-top:50px">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" style="font-size: 15px">
+        Skills and Languages
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+          <h5 class="accordion-header" style="margin-bottom:10px">Skills</h5>
+            <div class="form-outline mb-4">
+                 <div class="form-outline mb-4" style="margin: 10px;">
+      
+
+     <select name="skills" id="skills" class="form-control selectpicker" data-live-search="true" multiple maxlength="10" data-size="5" data-max-options="15" required>
+      {% for skills in skills %}
+      <option>{{skills.skills}}</option>
+      {% endfor %}
+     </select>
+     <br /><br />
+
+
+     <input type="hidden" name="hidden_skills" id="hidden_skills" />
+    <br />
+            </div>
+            </div>
+          <hr>
+
+
+          <h5 class="accordion-header" style="margin-bottom:10px">Languages</h5>
+            <div class="form-outline mb-4">
+                 <div class="form-outline mb-4" style="margin: 10px;">
+      
+
+     <select name="languages" id="languages" class="form-control selectpicker" data-live-search="true" multiple maxlength="10" data-size="5" data-max-options="3" required>
+      {% for languages in languages %}
+      <option value="{{languages.languages}}">{{languages.languages}}</option>
+      {% endfor %}
+     </select>
+     <br /><br />
+     <input type="hidden" name="hidden_langs" id="hidden_langs" />
+     <!-- <input type="submit" name="submit" class="btn btn-info" value="Submit" /> -->
+    <br />
+            </div>
+            </div>
+          <hr>
+
+<!-- <input type="submit" name="submit" class="btn btn-info" value="Submit" /> -->
+
+      </div>
+    </div>
+  </div>
+  <input type="submit" name="submit" class="btn btn-info" value="Submit" style="margin-top: 50px; background-color: #2b37b5; width:150px; height: 50px; font-size: 20px; font-family: 'Josefin Sans', sans-serif" />
+
+</div>
+
+  
+                <!-- Skill end-->
+</form>
+<br>
+<br><br><hr><br><br><center><div class="small text-center text-muted fst-italic" style="font-size:15px">Copyright &copy; AP Resume Builder 2023</div></center><br><br><br>
+</center>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="static/js/scripts.js"></script>
+        <script>
+          $(document).ready(function(){
+     $('.selectpicker').selectpicker();
+     
+     $('#skills').change(function(){
+      $('#hidden_skills').val($('#skills').val());
+     });
+     
+     $('#multiple_select_form').on('submit', function(event){
+      event.preventDefault();
+      if($('#skills').val() != '')
+      {
+       var form_data = $(this).serialize();
+       $.ajax({
+        url:"/ajax_add",
+        method:"POST",
+        data:form_data,
+        success:function(data)
+        {
+         //console.log(data);
+         $('#hidden_skills').val('');
+         $('.selectpicker').selectpicker('val', '');
+         alert(data);
+        }
+       })
+      }
+      else
+      {
+       alert("Please select Skills");
+       return false;
+      }
+     });
+    });
+        </script>
+
+        <script>
+          $(document).ready(function(){
+     $('.selectpicker').selectpicker();
+     
+     $('#languages').change(function(){
+      $('#hidden_langs').val($('#languages').val());
+     });
+     
+     $('#multiple_select_form').on('submit', function(event){
+      event.preventDefault();
+      if($('#languages').val() != '')
+      {
+       var form_data = $(this).serialize();
+       $.ajax({
+        url:"/ajax_add",
+        method:"POST",
+        data:form_data,
+        success:function(data)
+        {
+         //console.log(data);
+         $('#hidden_langs').val('');
+         $('.selectpicker').selectpicker('val', '');
+         alert(data);
+        }
+       })
+      }
+      else
+      {
+       alert("Please select Langauges");
+       return false;
+      }
+     });
+    });
+        </script>
+
+
+
+        <script>
+          const select = document.getElementById("languages");
+          select.size = Math.min(select.options.length, 5);
+        </script>
+
+        <script>
+          const select = document.getElementById("skills");
+          select.size = Math.min(select.options.length, 5);
+        </script>
+    </body>
+</html>

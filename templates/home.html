@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>AP Resume Builder</title>
+        <link rel="icon" type="image/x-icon" href="static/img/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+
+        <style>
+            body.dark {
+  background-color: #11213b;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 46px;
+  height: 22px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+  margin-top: -50px;
+}
+
+.ball {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: pink;
+  width: 14px;
+}
+
+.fa-sun {
+  color: yellow;
+  width: 12px;
+}
+        </style>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/" style="margin-top: -20px">AP Resume</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"><div>
+    <input type="checkbox" class="checkbox" id="checkbox">
+  <label for="checkbox" class="label">
+    <i class="fas fa-moon"></i>
+    <i class='fas fa-sun'></i>
+    <div class='ball'>
+  </label>
+</div></a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/logout">Logout</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+  <header class="masthead" style="background-image: url('static/img/home.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>AP Resume Builder</h1>
+                            <span class="subheading">Your resume is not a biography. It's a marketing piece.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<div class="container">
+    <div class="site-heading" style="color: #816350">
+    <center>
+        <h1>What do you want your resume to look like?</h1>
+        <span class="subheading" style="font-size:25px;">View all resume templates and select a specific style</span></center></div>
+        <div class="row">
+            <div class="col-sm" style="margin-left: 80px; margin-bottom: 40px;margin-top: 50px;">
+            <div id="myModal" class="modal">
+                    <span class="close">×</span>
+                     <img class="modal-content" id="img01">
+<!-- margin left -75 -->
+            </div>
+                    {% for temp in temp %}
+                    <a href="/lol/{{temp[1]}}" style="margin-right:30px"><button type="submit" class="btn btn-danger button" style="background-color: #836655;"><img id="myImg1" src="static/template_img/{{temp[2]}}" class="img-responsive img-thumbnail" width="300" height="200"></button></a>
+                    {% endfor %}
+            </div>           
+        </div>
+    </div>
+
+
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/amaan.shaikh007/" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-google fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; AP Resume Builder 2023</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="static/js/scripts.js"></script>
+
+        <script>
+            const checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('change', ()=>{
+  document.body.classList.toggle('dark');
+})
+        </script>
+    </body>
+</html>

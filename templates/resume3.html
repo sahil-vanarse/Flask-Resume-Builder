@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="icon" type="image/x-icon" href="static/img/favicon.png" />
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-111268069-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111268069-2');
+    </script>
+  <link rel="stylesheet" href="static/css/style.css">
+  <style>* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #ff7613;
+    --text-color: #727171;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-family: Inter, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* common styles */
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.description {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.title {
+    color: #745e4f;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.item_preTitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 300;
+}
+.item_title {
+    font-size: 1.6rem;
+    color: #120606;
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+.item_subtitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+/* layouts */
+.container {
+/*    max-width: 1000px;*/
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background: #d3ccff;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+.profile {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+.group-1,
+.group-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.group-3 {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+.group-3 > div {
+    flex: 1;
+}
+@media only screen and (max-width: 768px) {
+    .profile {
+        margin-bottom: 0;
+    }
+    .group-3 {
+        flex-direction: column;
+    }
+}
+
+/* profile */
+.profile_container {
+    display: flex;
+    gap: 2rem;
+}
+.profile_profileImg {
+    max-width: 250px;
+}
+.profile_name_firstName {
+    color: white;
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: -0.8rem;
+}
+.profile_name_lastName {
+    color: #745e4f;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+}
+.profile_title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.downloadBtn {
+    display: block;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.downloadBtn:hover {
+    color: var(--primary-color);
+}
+@media only screen and (max-width: 768px) {
+    .profile_container {
+        flex-direction: column;
+    }
+}
+
+/* Expertise */
+.skills_list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+/* Ref  */
+.ref_item {
+    margin-top: 2rem;
+}
+.ref_name {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* eduction */
+.edu_item {
+    margin-top: 2rem;
+}
+
+/* certification */
+.certification_item {
+    margin-top: 2rem;
+}
+/* exp */
+.exp_item {
+    margin-top: 2rem;
+}
+
+/* awards */
+.awards_item {
+    margin-top: 2rem;
+}
+/* Interests */
+.interest_items {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.interest_item {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+.interest_item svg {
+    width: 2rem;
+}
+
+/* socials */
+.social_items {
+    margin-top: 2rem;
+}
+.social_item {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-color);
+}
+.social_item:hover {
+    color: var(--primary-color);
+}
+.social_item svg {
+    width: 2rem;
+}
+
+hr {
+    grid-column: 1/-1;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 2px solid rgba(128, 128, 128, 0.229);
+}
+
+@media print{
+  #printButton{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    hr {
+        margin: 0 auto;
+    }
+}</style>
+</head>
+
+<body>
+  <nav style="width: 200px; margin-left:300px; margin-top: 50px">
+      <button id="printButton" style="width:100px; background-color: #d3ccff ;"><a href="/home" style="background-color: #d3ccff; color: #745e4f; font-size: 20px;">Home</a></button>
+      <button id="printButton" style="width:100px; background-color: #d3ccff ;"><a href="#" style="background-color: #d3ccff; color: #745e4f; font-size: 20px;" onclick="print()">Print</a></button>
+    </nav>
+  <div class="container">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_profileImg" style="width:90%; height: 90%;">
+          <img class="porfile-pic" src="static/passport/{{personal.image}}" alt="porfile-pic">
+          <!-- <img src="static/passport/aman_passport.jpg" alt="shaif arfan"> -->
+        </div>
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_name_lastName">{{personal.name}}</span>
+            <!-- <span class="profile_name_firstName">Shaif</span> -->
+            <!-- <span class="profile_name_lastName">Arfan</span> -->
+          </h1>
+          <p class="profile_title" style="color: #120606">{{personal.profession}}</p>
+          <p class="description profile_description">
+            {{personal.objective}}
+          </p>
+          <!-- <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf">Download Resume</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="group-1">
+
+      <div class="skills">
+        <h3 class="title">Contact</h3>
+        <div class="contact_info">
+          <p class="description">
+            <span style="color: #120606">Address :</span> {{personal.city}}, {{personal.country}}, {{personal.pin}}
+          </p>
+          <p class="description">
+            <span style="color: #120606">Phone :</span> {{personal.phone}}
+          </p>
+          <p class="description">
+            <span style="color: #120606">Email :</span> {{personal.email}}
+          </p>
+          <p class="description">
+            <span style="color: #120606">DOB :</span> {{personal.dob}}
+          </p>
+        </div>
+      </div>
+
+      <div class="skills">
+        <h3 class="title">Skills</h3>
+        <ul class="skills_list description">
+           {% for skill in skill_list %}
+            <li>{{skill}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h3 class="title">Languages</h3>
+        <ul class="skills_list description">
+           {% for lang in lang_list %}
+            <li>{{lang}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- <div class="ref">
+        <h3 class="title">Reference</h3>
+        <div class="ref_item">
+          <h4 class="ref_name">Rashid Chy</h4>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, neque?</p>
+        </div>
+        <div class="ref_item">
+          <h4 class="ref_name">Ayman Rahman</h4>
+          <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+        </div>
+      </div> -->
+
+      <!-- <div class="edu">
+        <h3 class="title">Education</h3>
+        <div class="edu_item">
+          <p class="item_preTitle">2012-2014</p>
+          <h4 class="item_title">MSC in CSE</h4>
+          <p class="item_subtitle">
+            Chittagong University
+          </p>
+        </div>
+        <div class="edu_item">
+          <p class="item_preTitle">2008-2012</p>
+          <h4 class="item_title">BSC in CSE</h4>
+          <p class="item_subtitle">
+            Chittagong University
+          </p>
+        </div>
+      </div> -->
+
+      <!-- <div class="certification">
+        <h3 class="title">certification</h3>
+        <div class="certification_item">
+          <p class="item_preTitle">2018</p>
+          <h4 class="item_title">Frontend Developer</h4>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam,
+          </p>
+        </div>
+      </div> -->
+    </div>
+    <div class="group-2" style="margin-left:-60px">
+      <div class="exp">
+        <h3 class="title">Education</h3>
+
+        <div class="exp_item">
+          <p class="item_preTitle">{{clg.college_start[0:7]}} to {{clg.college_end[0:7]}}</p>
+          <h4 class="item_title">{{clg.college_name}}</h4>
+          <p class="item_subtitle">{{clg.college_loc}}</p>
+          <p class=" description">
+            <span>Field of Study : {{clg.field_study}} </span><br>
+            <span>Percentage or CGPA: : {{clg.college_per}} </span>
+          </p>
+        </div>
+
+        <div class="exp_item">
+          <p class="item_preTitle">{{deg_clg.deg_start[0:7]}} to {{deg_clg.deg_end[0:7]}}</p>
+          <h4 class="item_title">{{deg_clg.deg_clg}}</h4>
+          <p class="item_subtitle">{{deg_clg.deg_loc}}</p>
+          <p class=" description">
+            <span>Field of Study : {{deg_clg.deg_std_fld}} </span><br>
+            <span>Percentage or CGPA: : {{deg_clg.deg_per}} </span>
+          </p>
+        </div>
+
+        <div class="exp_item">
+          <p class="item_preTitle">{{post_deg_clg.post_deg_start[0:7]}} to {{post_deg_clg.post_deg_end[0:7]}}</p>
+          <h4 class="item_title">{{post_deg_clg.post_deg_clg}}</h4>
+          <p class="item_subtitle">{{post_deg_clg.post_deg_loc}}</p>
+          <p class=" description">
+            <span>Field of Study : {{post_deg_clg.post_deg_std_fld}} </span><br>
+            <span>Percentage or CGPA: : {{post_deg_clg.post_deg_per}} </span>
+          </p>
+        </div>
+
+        
+      </div>
+
+      <div class="awards">
+        <h3 class="title">Work Experience</h3>
+        <div class="awards_item">
+          <p class="item_preTitle">{{work.start_date1[0:7]}} to {{work.end_date1[0:7]}}</p>
+          <h4 class="item_title">{{work.employer1}}</h4>
+          <p class=" description">
+            {{work.work_city1}}, {{work.work_country1}}
+          </p>
+          <p class=" description">
+            <span style="color: #120606">Employer: </span>{{work.employer1}}
+          </p>
+        </div>
+      </div>
+
+      <div class="awards">
+        <h3 class="title">Project</h3>
+        <div class="awards_item">
+          <p class="item_preTitle">{{project.pro_start1[0:7]}} to {{project.pro_end1[0:7]}}</p>
+          <h4 class="item_title">{{project.proj_title1}}</h4>
+          <p class=" description">
+            {{project.proj_des1}}
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="interest">
+        <h3 class="title">Interest</h3>
+        <div class="interest_items">
+          <div class="interest_item">
+            <i data-feather="music"></i>
+            <span>Music</span>
+          </div>
+          <div class="interest_item">
+            <i data-feather="book"></i>
+            <span>Books</span>
+          </div>
+          <div class="interest_item">
+            <i data-feather="map"></i>
+            <span>Travel</span>
+          </div>
+        </div>
+
+      </div> -->
+    </div>
+    <!-- <hr> -->
+    <!-- <div class="group-3">
+      <div class="contact">
+        <h3 class="title">Contact</h3>
+        <div class="contact_info">
+          <p class="description">
+            Chittagong, Bangladesh
+          </p>
+          <p class="description">
+            +880 ** *** ***
+          </p>
+          <p class="description">
+            shaifarfan08@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="social">
+        <h3 class="title">Socials</h3>
+        <div class="social_items">
+          <a href="#" target="_b" class="social_item">
+            <i data-feather="github"></i>
+            <span>/shaifarfan</span>
+          </a>
+          <a href="#" target="_blank" class="social_item">
+            <i data-feather="twitter"></i>
+            <span>/shaifarfan08</span>
+          </a>
+          <a href="#" target="_blank" class="social_item">
+            <i data-feather="linkedin"></i>
+            <span>/shaifarfan08</span>
+          </a>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <script>
+    feather.replace()
+  </script>
+</body>
+
+</html>
