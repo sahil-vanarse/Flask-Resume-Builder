@@ -24,3 +24,6 @@ Frontend: HTML, CSS, Bootstrap
 Backend: Python, Flask
 Database: MySQL
 Getting Started:
+
+If any changes or help you need please feel free to contact me.
+Email : sahilvanarse13@gmail.com
